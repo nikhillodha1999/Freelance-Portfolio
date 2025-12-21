@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikhil Lodha | Hybrid Creator & AI Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #a7f3d0;
+        --secondary: #ddd6fe;
+        --accent: #fda4af;
+        --text-main: #1e293b;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: var(--text-main);
+        overflow-x: hidden;
+      }
+      .font-heading {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* Animated Mesh Background */
+      .bg-mesh {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: radial-gradient(
+            circle at 10% 20%,
+            rgba(167, 243, 208, 0.4) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(221, 214, 254, 0.4) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(253, 164, 175, 0.2) 0%,
+            transparent 50%
+          );
+        filter: blur(60px);
+        animation: meshMove 20s ease-in-out infinite alternate;
+      }
+
+      @keyframes meshMove {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1) rotate(3deg);
+        }
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .glass-card:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-8px);
+        border-color: #10b981; /* emerald-500 */
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05);
+      }
+
+      .text-gradient {
+        background: linear-gradient(to right, #059669, #7c3aed, #db2777);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Fixed the @apply issue by using standard CSS */
+      .service-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border: 1px solid;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-mesh"></div>
+
+    <nav
+      class="fixed w-full z-50 px-6 py-4 flex flex-row justify-between items-center glass border-b border-white/20"
+    >
+      <div
+        class="text-2xl font-black tracking-tighter font-heading text-slate-800"
+      >
+        N<span class="text-emerald-500">L</span>
+      </div>
+      <div
+        class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-[0.2em] font-bold text-slate-600"
+      >
+        <a href="#services" class="hover:text-emerald-600 transition-colors"
+          >Services</a
+        >
+        <a href="#network" class="hover:text-purple-600 transition-colors"
+          >Portfolio</a
+        >
+        <a
+          href="#contact"
+          class="bg-slate-900 text-white px-8 py-3 rounded-full hover:bg-emerald-600 hover:scale-105 transition-all shadow-xl shadow-slate-200"
+          >Collab</a
+        >
+      </div>
+    </nav>
+
+    <section
+      class="min-h-screen flex flex-col justify-center items-center relative px-4 text-center"
+    >
+      <div class="relative z-10 reveal active">
+        <div
+          class="inline-block px-4 py-1 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 font-mono text-xs mb-6 tracking-widest uppercase"
+        >
+          ⚡ Engineering Creativity & AI
+        </div>
+        <h1
+          class="text-4xl md:text-7xl lg:text-[85px] font-black leading-tight tracking-tighter font-heading mb-8 text-slate-900"
+        >
+          I SHOOT, CODE & <br />
+          <span class="text-gradient">GENERATE.</span>
+        </h1>
+        <p
+          class="max-w-2xl mx-auto text-slate-600 text-lg md:text-xl font-light leading-relaxed mb-10"
+        >
+          Ex-Dassault Systèmes AI Developer turned
+          <span
+            class="font-bold text-slate-800 underline decoration-emerald-300 decoration-2 underline-offset-4"
+            >Full-time Content creator and Freelance Web Developer</span
+          >. Bridging the gap between cinematic production and AI efficiency.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#network"
+            class="px-8 py-4 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-100"
+            >See Client Work</a
+          >
+          <a
+            href="#services"
+            class="px-8 py-4 glass rounded-xl font-bold text-slate-700 hover:bg-white transition-all"
+            >My Services</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 bg-white/30">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-center text-4xl font-black font-heading mb-16 text-slate-900 uppercase reveal"
+        >
+          Freelance <span class="text-emerald-500">Solutions</span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            onclick="window.location.href='ai-production.html'"
+            class="glass-card p-8 rounded-3xl cursor-pointer group"
+          >
+            <div
+              class="text-3xl mb-4 transition-transform group-hover:scale-110"
+            >
+              🤖
+            </div>
+            <h3 class="text-xl font-bold mb-2">AI Video Production</h3>
+            <p class="text-slate-500 text-sm mb-4">
+              Leveraging Sora, Runway, and Luma to create surreal, viral-ready
+              AI cinematics.
+            </p>
+            <div class="flex justify-between items-center mt-6">
+              <div class="flex gap-2">
+                <span
+                  class="service-badge border-emerald-200 bg-emerald-50 text-emerald-600"
+                  >Motion Gen</span
+                >
+              </div>
+              <span
+                class="text-emerald-500 font-bold text-xs uppercase group-hover:translate-x-2 transition-transform"
+                >View Gallery →</span
+              >
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-3xl reveal">
+            <div class="text-3xl mb-4">🎬</div>
+            <h3 class="text-xl font-bold mb-2">The Creator Suite</h3>
+            <p class="text-slate-500 text-sm mb-6">
+              Full-cycle production: Scriptwriting, on-site shooting, and
+              post-production for UGC & Branded content.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="service-badge border-purple-200 bg-purple-50 text-purple-600"
+                >UGC</span
+              >
+              <span
+                class="service-badge border-purple-200 bg-purple-50 text-purple-600"
+                >Cinematography</span
+              >
+            </div>
+          </div>
+
+          <div
+            onclick="window.location.href='web-dev.html'"
+            class="glass-card p-8 rounded-3xl cursor-pointer group"
+          >
+            <div
+              class="text-3xl mb-4 transition-transform group-hover:rotate-12"
+            >
+              🌐
+            </div>
+            <h3 class="text-xl font-bold mb-2">Web Development</h3>
+            <p class="text-slate-500 text-sm mb-4">
+              Building high-performance landing pages and portfolios that
+              convert followers into clients.
+            </p>
+            <div class="flex justify-between items-center mt-6">
+              <div class="flex gap-2">
+                <span
+                  class="service-badge border-rose-200 bg-rose-50 text-rose-600"
+                  >React/NextJS</span
+                >
+              </div>
+              <span
+                class="text-rose-600 font-bold text-xs uppercase group-hover:translate-x-2 transition-transform"
+                >View Work →</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="network" class="py-24 px-6 max-w-7xl mx-auto">
+      <h2
+        class="text-4xl md:text-5xl font-black font-heading mb-16 text-slate-900 reveal"
+      >
+        THE <span class="text-emerald-500">PRODUCTION</span> SUITE
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="md:col-span-2 glass-card p-10 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10 reveal"
+        >
+          <div class="flex-1">
+            <div
+              class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 rounded-lg text-[10px] font-bold uppercase mb-4 tracking-widest"
+            >
+              Ongoing Partnership
+            </div>
+            <h3 class="text-4xl font-black mb-4 text-slate-800">
+              Bhagyashree Lodha
+            </h3>
+            <p class="text-slate-500 text-lg mb-8">
+              Leading the creative engine for two high-growth channels. I manage
+              the
+              <span class="text-slate-800 font-bold"
+                >cinematography, advanced editing logic, and content
+                strategy</span
+              >
+              to maintain a premium aesthetic.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="https://www.youtube.com/@BhagyashreeLodhaa"
+                target="_blank"
+                class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold hover:bg-emerald-600 transition-all text-sm"
+                >Channel A: Podcast</a
+              >
+              <a
+                href="https://www.youtube.com/@bhagyashreeNnikhillodha"
+                target="_blank"
+                class="px-6 py-3 border border-slate-200 bg-white text-slate-800 rounded-xl font-bold hover:bg-slate-50 transition-all text-sm"
+                >Channel B: Social Impact</a
+              >
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 grid grid-cols-2 gap-4">
+            <div
+              class="aspect-square glass rounded-2xl flex flex-col items-center justify-center text-center p-4"
+            >
+              <span class="text-2xl font-bold">2M+</span>
+              <span
+                class="text-[10px] text-slate-400 uppercase tracking-tighter"
+                >Reach</span
+              >
+            </div>
+            <div
+              class="aspect-square glass rounded-2xl flex flex-col items-center justify-center text-center p-4"
+            >
+              <span class="text-2xl font-bold">4K</span>
+              <span
+                class="text-[10px] text-slate-400 uppercase tracking-tighter"
+                >Quality</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 rounded-[2.5rem] reveal">
+          <h3 class="text-3xl font-black mb-2 text-slate-800">@_nick_heal</h3>
+          <p class="text-emerald-600 font-medium mb-6">
+            Instagram • Digital Storytelling
+          </p>
+          <div class="flex justify-between items-end">
+            <div>
+              <span class="text-4xl font-black">260K+</span>
+              <p class="text-slate-400 text-xs uppercase tracking-widest">
+                Impressions
+              </p>
+            </div>
+            <a
+              href="https://www.instagram.com/_nick_heal/"
+              target="_blank"
+              class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-emerald-500 transition-colors"
+              >→</a
+            >
+          </div>
+        </div>
+
+        <div class="glass-card p-10 rounded-[2.5rem] reveal">
+          <h3 class="text-3xl font-black mb-2 text-slate-800">Nikhil Lodha</h3>
+          <p class="text-purple-600 font-medium mb-6">
+            YouTube • Cinematic Vlogs & AI
+          </p>
+          <div class="flex justify-between items-end">
+            <div>
+              <span class="text-4xl font-black">Vlogs</span>
+              <p class="text-slate-400 text-xs uppercase tracking-widest">
+                Format
+              </p>
+            </div>
+            <a
+              href="https://www.youtube.com/@Nik_heal"
+              target="_blank"
+              class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors"
+              >→</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+      <div
+        class="max-w-4xl mx-auto glass rounded-[3rem] p-10 md:p-16 text-center shadow-2xl shadow-emerald-100/50 reveal"
+      >
+        <h2
+          class="text-4xl md:text-6xl font-black font-heading mb-6 text-slate-900"
+        >
+          LET'S <span class="text-gradient">BUILD.</span>
+        </h2>
+        <p class="text-slate-500 text-lg md:text-xl mb-10">
+          Shoot me an email for Branded Content, AI Video Generation, or Website
+          Builds.
+        </p>
+        <a
+          href="mailto:nicklodha111@gmail.com"
+          class="text-xl md:text-4xl font-bold text-slate-800 hover:text-emerald-600 border-b-2 border-emerald-200 pb-2 transition-all break-all"
+          >nicklodha111@gmail.com</a
+        >
+        <div class="mt-16 text-slate-400 text-xs tracking-widest uppercase">
+          © 2025 Nikhil Lodha • Engineered for Impact
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Simple Intersection Observer for scroll animations
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

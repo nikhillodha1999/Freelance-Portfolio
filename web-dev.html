@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Portfolio | Nikhil Lodha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+      }
+      .font-heading {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .project-card {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .project-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(16, 185, 129, 0.4);
+      }
+      .project-card:hover .project-image {
+        transform: scale(1.05);
+      }
+      .text-gradient {
+        background: linear-gradient(to right, #10b981, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="p-6 md:p-12">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center mb-16">
+      <a
+        href="index.html"
+        class="glass px-6 py-2 rounded-full text-sm font-bold hover:bg-white/10 transition-all"
+        >← Back</a
+      >
+      <div class="text-xl font-black font-heading tracking-widest">
+        DEV<span class="text-emerald-500">PORT</span>
+      </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center mb-24">
+      <h1 class="text-5xl md:text-7xl font-black font-heading mb-6 uppercase">
+        Code & <span class="text-gradient">Canvas.</span>
+      </h1>
+      <p class="text-slate-400 text-lg md:text-xl font-light">
+        Transforming complex ideas into high-performance digital experiences.
+        Specializing in React, Tailwind CSS, and Interactive UI.
+      </p>
+    </header>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div
+        class="project-card glass rounded-[2.5rem] overflow-hidden flex flex-col group"
+      >
+        <div class="relative aspect-video overflow-hidden">
+          <img
+            src="img/Event_canvas.png"
+            alt="Event Canvas"
+            class="project-image w-full h-full object-cover transition-transform duration-700"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"
+          ></div>
+        </div>
+        <div class="p-10">
+          <div
+            class="text-emerald-500 text-xs font-bold uppercase tracking-widest mb-2"
+          >
+            Event Management
+          </div>
+          <h3 class="text-3xl font-bold mb-4 font-heading">The Event Canvas</h3>
+          <p class="text-slate-400 mb-8 leading-relaxed">
+            A modern, immersive platform designed for event organizers. Features
+            high-end aesthetics, smooth scrolling, and a focus on visual
+            storytelling.
+          </p>
+          <a
+            href="https://nikhillodha1999.github.io/The_Event_Canvas/"
+            target="_blank"
+            class="inline-block px-8 py-3 bg-white text-black font-bold rounded-xl hover:bg-emerald-500 hover:text-white transition-all"
+            >Launch Site →</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="project-card glass rounded-[2.5rem] overflow-hidden flex flex-col group"
+      >
+        <div class="relative aspect-video overflow-hidden">
+          <img
+            src="img/weather.png"
+            alt="Weather App"
+            class="project-image w-full h-full object-cover transition-transform duration-700"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"
+          ></div>
+        </div>
+        <div class="p-10">
+          <div
+            class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2"
+          >
+            Utility / React
+          </div>
+          <h3 class="text-3xl font-bold mb-4 font-heading">
+            AI Weather Engine
+          </h3>
+          <p class="text-slate-400 mb-8 leading-relaxed">
+            A dynamic weather forecasting application built with React.
+            Integrates real-time APIs to provide precise data with a clean,
+            minimal interface.
+          </p>
+          <a
+            href="https://weather-forcasting-react.netlify.app/"
+            target="_blank"
+            class="inline-block px-8 py-3 bg-white text-black font-bold rounded-xl hover:bg-blue-500 hover:text-white transition-all"
+            >Launch Site →</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="project-card glass rounded-[2.5rem] overflow-hidden flex flex-col group"
+      >
+        <div class="relative aspect-video overflow-hidden">
+          <img
+            src="img/E-commerce.png"
+            alt="E-commerce Store"
+            class="project-image w-full h-full object-cover transition-transform duration-700"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"
+          ></div>
+        </div>
+        <div class="p-10">
+          <div
+            class="text-emerald-400 text-xs font-bold uppercase tracking-widest mb-2"
+          >
+            E-commerce / Retail
+          </div>
+          <h3 class="text-3xl font-bold mb-4 font-heading">
+            The Digital Storefront
+          </h3>
+          <p class="text-slate-400 mb-8 leading-relaxed">
+            A fully functional, responsive e-commerce application. Focuses on a
+            seamless user journey, high-conversion product layouts, and
+            lightning-fast performance via Netlify.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span
+              class="px-3 py-1 bg-white/5 rounded-md text-[10px] text-slate-300 border border-white/10 uppercase font-bold"
+              >Product Grids</span
+            >
+            <span
+              class="px-3 py-1 bg-white/5 rounded-md text-[10px] text-slate-300 border border-white/10 uppercase font-bold"
+              >Shopping Cart UI</span
+            >
+          </div>
+          <a
+            href="https://tiny-bonbon-c64550.netlify.app/"
+            target="_blank"
+            class="inline-block px-8 py-3 bg-white text-black font-bold rounded-xl hover:bg-emerald-500 hover:text-white transition-all"
+            >Launch Store →</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="project-card glass rounded-[2.5rem] overflow-hidden flex flex-col group"
+      >
+        <div class="relative aspect-video overflow-hidden">
+          <img
+            src="img/portfolio.png"
+            alt="Freelance"
+            class="project-image w-full h-full object-cover transition-transform duration-700"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"
+          ></div>
+        </div>
+        <div class="p-10">
+          <div
+            class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-2"
+          >
+            Portfolio Design
+          </div>
+          <h3 class="text-3xl font-bold mb-4 font-heading">
+            Creative Portfolio
+          </h3>
+          <p class="text-slate-400 mb-8 leading-relaxed">
+            A specialized landing page for freelancers. Optimized for conversion
+            with a strong focus on mobile responsiveness and SEO.
+          </p>
+          <a
+            href="https://nikhillodha1999.github.io/Freelance-Portfolio/"
+            target="_blank"
+            class="inline-block px-8 py-3 bg-white text-black font-bold rounded-xl hover:bg-purple-500 hover:text-white transition-all"
+            >Launch Site →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="max-w-4xl mx-auto text-center py-32">
+      <h2 class="text-4xl font-bold mb-6 font-heading">
+        Need a custom digital home?
+      </h2>
+      <p class="text-slate-500 mb-10 text-lg">
+        I build landing pages that don't just look good—they convert.
+      </p>
+      <a
+        href="mailto:nicklodha111@gmail.com"
+        class="text-2xl font-bold border-b-2 border-emerald-500 pb-2 hover:text-emerald-500 transition-all"
+        >Let's talk code.</a
+      >
+    </section>
+
+    <footer
+      class="text-center py-12 border-t border-white/10 text-slate-500 text-xs tracking-widest uppercase"
+    >
+      © 2025 Nikhil Lodha • Engineered with Precision
+    </footer>
+  </body>
+</html>
