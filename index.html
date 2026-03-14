@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,8 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             circle at 10% 20%,
             rgba(167, 243, 208, 0.4) 0%,
             transparent 40%
@@ -186,7 +187,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
-            onclick="window.location.href='ai-production.html'"
+            onclick="window.location.href = 'ai-production.html'"
             class="glass-card p-8 rounded-3xl cursor-pointer group"
           >
             <div
@@ -213,7 +214,7 @@
             </div>
           </div>
 
-          <div class="glass-card p-8 rounded-3xl reveal">
+          <!-- <div class="glass-card p-8 rounded-3xl reveal">
             <div class="text-3xl mb-4">🎬</div>
             <h3 class="text-xl font-bold mb-2">The Creator Suite</h3>
             <p class="text-slate-500 text-sm mb-6">
@@ -230,10 +231,45 @@
                 >Cinematography</span
               >
             </div>
+          </div> -->
+
+          <div
+            onclick="
+              window.open('https://www.instagram.com/_nick_heal/', '_blank')
+            "
+            class="glass-card p-8 rounded-3xl cursor-pointer group reveal"
+          >
+            <div
+              class="text-3xl mb-4 transition-transform group-hover:scale-110"
+            >
+              🎬
+            </div>
+            <h3 class="text-xl font-bold mb-2">The Creator Suite</h3>
+            <p class="text-slate-500 text-sm mb-6">
+              Full-cycle production: Scriptwriting, on-site shooting, and
+              post-production for UGC & Branded content.
+            </p>
+            <div class="flex justify-between items-center mt-6">
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="service-badge border-purple-200 bg-purple-50 text-purple-600"
+                  >UGC</span
+                >
+                <span
+                  class="service-badge border-purple-200 bg-purple-50 text-purple-600"
+                  >Cinematography</span
+                >
+              </div>
+              <span
+                class="text-purple-600 font-bold text-xs uppercase group-hover:translate-x-1 transition-transform"
+              >
+                View Insta →
+              </span>
+            </div>
           </div>
 
           <div
-            onclick="window.location.href='web-dev.html'"
+            onclick="window.location.href = 'web-dev.html'"
             class="glass-card p-8 rounded-3xl cursor-pointer group"
           >
             <div
@@ -332,7 +368,7 @@
         <div class="glass-card p-10 rounded-[2.5rem] reveal">
           <h3 class="text-3xl font-black mb-2 text-slate-800">@_nick_heal</h3>
           <p class="text-emerald-600 font-medium mb-6">
-            Instagram • Digital Storytelling
+            Instagram • Content Creator
           </p>
           <div class="flex justify-between items-end">
             <div>
@@ -353,7 +389,7 @@
         <div class="glass-card p-10 rounded-[2.5rem] reveal">
           <h3 class="text-3xl font-black mb-2 text-slate-800">Nikhil Lodha</h3>
           <p class="text-purple-600 font-medium mb-6">
-            YouTube • Cinematic Vlogs & AI
+            YouTube • Fashion, Lifestyle & Vlogs
           </p>
           <div class="flex justify-between items-end">
             <div>
